@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<title>Pineta di D'Annunzio — Ecomuseo del Litorale</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L7 9h3L6 16h4l-2 6h8l-2-6h4L14 9h3L12 2z" fill="#a8d5a2"/></svg>
+    </div>
+    <div>
+      <div class="nav-logo-text">Pineta di D'Annunzio</div>
+      <div class="nav-logo-sub">Ecomuseo del Litorale</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="progetto-ecomuseo.html">Progetto Ecomuseo</a>
+    <a href="#">Pineta D'Annunziana</a>
+    <a href="#">Annunci ed Eventi</a>
+    <a href="#">Percorsi e attività</a>
+    <a href="#" class="nav-cta">Contatti</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-trees">
+    <div class="tree"><div class="tree-top" style="border-left-width:22px;border-right-width:22px;border-bottom-width:70px;"></div><div class="tree-trunk" style="height:20px;"></div></div>
+    <div class="tree"><div class="tree-top" style="border-left-width:32px;border-right-width:32px;border-bottom-width:95px;"></div><div class="tree-trunk" style="height:28px;"></div></div>
+    <div class="tree"><div class="tree-top" style="border-left-width:18px;border-right-width:18px;border-bottom-width:55px;"></div><div class="tree-trunk" style="height:16px;"></div></div>
+    <div class="tree"><div class="tree-top" style="border-left-width:38px;border-right-width:38px;border-bottom-width:110px;"></div><div class="tree-trunk" style="height:34px;"></div></div>
+    <div class="tree"><div class="tree-top" style="border-left-width:26px;border-right-width:26px;border-bottom-width:80px;"></div><div class="tree-trunk" style="height:24px;"></div></div>
+    <div class="tree"><div class="tree-top" style="border-left-width:20px;border-right-width:20px;border-bottom-width:62px;"></div><div class="tree-trunk" style="height:18px;"></div></div>
+    <div class="tree"><div class="tree-top" style="border-left-width:28px;border-right-width:28px;border-bottom-width:85px;"></div><div class="tree-trunk" style="height:26px;"></div></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">Patrimonio Naturale e Letterario</div>
+    <h1>La Pineta di D'Annunzio —<br>un bosco, una memoria</h1>
+    <div class="hero-quote">
+      "Fra i pini sonanti il vento passa<br>
+      come passa nel cuore il desiderio."
+    </div>
+    <div class="hero-quote-attr">Gabriele D'Annunzio</div>
+    <div class="hero-btns">
+      <a href="#accessibilita" class="btn-primary">Come raggiungerci</a>
+      <a href="#storia" class="btn-outline">La storia</a>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="storia">
+  <div class="dann-banner">
+    <div class="dann-left">
+      <div class="dann-eyebrow">IL POETA E IL BOSCO</div>
+      <div class="dann-title">Gabriele D'Annunzio e il litorale adriatico</div>
+      <div class="dann-text">La pineta che costeggia il litorale fu amata e cantata dal Vate, che la immortalò nelle sue opere come luogo di ispirazione e meditazione. Oggi è un bene comune da tutelare e vivere, custode di storia letteraria e di straordinaria biodiversità costiera.</div>
+    </div>
+    <div class="dann-right">
+      <div class="dann-stat">
+        <div class="dann-stat-num">1863</div>
+        <div class="dann-stat-label">Anno di nascita di D'Annunzio</div>
+      </div>
+      <div class="dann-stat">
+        <div class="dann-stat-num">~200 ha</div>
+        <div class="dann-stat-label">Estensione del bosco costiero</div>
+      </div>
+      <div class="dann-stat">
+        <div class="dann-stat-num">Pinus pinea</div>
+        <div class="dann-stat-label">Specie dominante del litorale</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-alt">
+  <div class="section-title">Luoghi di interesse</div>
+  <div class="section-sub">I siti naturali, storici e letterari che compongono l'ecomuseo</div>
+  <div class="places-grid">
+    <div class="place-card">
+      <div class="place-img">
+        <svg viewBox="0 0 48 48" fill="none"><path d="M24 4L16 18h5L13 32h6l-3 12h16l-3-12h6L27 18h5L24 4z" fill="#639922"/><rect x="22" y="44" width="4" height="4" fill="#6b4a2a"/></svg>
+      </div>
+      <div class="place-body">
+        <div class="place-tag">Natura</div>
+        <div class="place-name">Pineta litoranea</div>
+        <div class="place-desc">Il cuore del parco: pini marittimi e domestici che scendono fino alla battigia adriatica.</div>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-img" style="background:#fef3c7;">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="28" width="32" height="16" rx="2" fill="#b45309"/><rect x="14" y="20" width="20" height="10" rx="1" fill="#d97706"/><rect x="20" y="12" width="8" height="10" rx="1" fill="#d97706"/><rect x="18" y="36" width="5" height="8" fill="#78350f"/><rect x="25" y="36" width="5" height="8" fill="#78350f"/></svg>
+      </div>
+      <div class="place-body">
+        <div class="place-tag">Letteratura</div>
+        <div class="place-name">Villa "La Capponcina"</div>
+        <div class="place-desc">Dimora prediletta del Vate, dove scrisse ispirandosi ai paesaggi adriatici e al profumo dei pini.</div>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-img" style="background:#e0f2fe;">
+        <svg viewBox="0 0 48 48" fill="none"><path d="M6 36 Q12 28 18 32 Q24 36 30 28 Q36 20 42 24" stroke="#0369a1" stroke-width="2.5" fill="none"/><ellipse cx="24" cy="40" rx="20" ry="6" fill="#bae6fd"/></svg>
+      </div>
+      <div class="place-body">
+        <div class="place-tag">Natura</div>
+        <div class="place-name">Dune e spiaggia</div>
+        <div class="place-desc">Il sistema dunale protetto, ecosistema fragile al confine tra pineta e mare Adriatico.</div>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-img" style="background:#fdf4ff;">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="14" width="28" height="24" rx="2" fill="#d8b4fe"/><rect x="16" y="8" width="16" height="8" rx="1" fill="#a855f7"/><line x1="10" y1="24" x2="38" y2="24" stroke="#7c3aed" stroke-width="1"/><rect x="20" y="28" width="8" height="10" fill="#7c3aed"/></svg>
+      </div>
+      <div class="place-body">
+        <div class="place-tag">Cultura</div>
+        <div class="place-name">Centro espositivo</div>
+        <div class="place-desc">Mostre permanenti su D'Annunzio, la flora costiera e la storia del litorale adriatico.</div>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-img" style="background:#f0fdf4;">
+        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" fill="#86efac"/><circle cx="24" cy="24" r="8" fill="#22c55e"/><path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="#15803d" stroke-width="2"/></svg>
+      </div>
+      <div class="place-body">
+        <div class="place-tag">Biodiversità</div>
+        <div class="place-name">Area naturalistica</div>
+        <div class="place-desc">Oasi con avifauna tipica della macchia mediterranea e del litorale adriatico.</div>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-img" style="background:#fff7ed;">
+        <svg viewBox="0 0 48 48" fill="none"><path d="M24 6 L28 20 H42 L31 28 L35 42 L24 34 L13 42 L17 28 L6 20 H20 Z" fill="#f97316"/></svg>
+      </div>
+      <div class="place-body">
+        <div class="place-tag">Poesia</div>
+        <div class="place-name">Sentiero dei versi</div>
+        <div class="place-desc">Percorso con targhe recanti passi delle opere dannunziane legate al bosco e al mare.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="poetry-section">
+  <div class="poetry-inner">
+    <div class="poetry-label">D'ANNUNZIO E LA PINETA</div>
+    <div class="poetry-text">
+      "La pioggia nel pineto"<br>
+      tace il vento; tacciono<br>
+      le fronde; sui rami<br>
+      tremanti scroscia il pianto
+    </div>
+    <div class="poetry-attr">Gabriele D'Annunzio, <em>Alcyone</em> (1903)</div>
+  </div>
+</div>
+
+<div class="section" id="accessibilita">
+  <div class="section-title">L'accessibilità</div>
+  <div class="section-sub">I punti di accesso e gli ingressi alla Pineta Dannunziana per scoprire l'ecomuseo del litorale</div>
+
+  <div class="access-layout">
+    <div id="map" class="map-container"></div>
+    <div class="access-list">
+      <div class="access-list-title">Punti di accesso</div>
+
+      <div class="access-point">
+        <span class="access-marker" style="background:#dc2626;">1</span>
+        <div class="access-info">
+          <div class="access-name">Ingresso Nord</div>
+          <div class="access-addr">Viale della Pineta</div>
+          <div class="access-desc">Parcheggio gratuito · Info point · Accessibile</div>
+        </div>
+      </div>
+
+      <div class="access-point">
+        <span class="access-marker" style="background:#22c55e;">2</span>
+        <div class="access-info">
+          <div class="access-name">Ingresso Centrale</div>
+          <div class="access-addr">Viale Marconi</div>
+          <div class="access-desc">Accessibile a bici e passeggini · Bagni</div>
+        </div>
+      </div>
+
+      <div class="access-point">
+        <span class="access-marker" style="background:#3b82f6;">3</span>
+        <div class="access-info">
+          <div class="access-name">Ingresso Lungomare</div>
+          <div class="access-addr">Lungomare Cristoforo Colombo</div>
+          <div class="access-desc">Accesso diretto dalla spiaggia</div>
+        </div>
+      </div>
+
+      <div class="access-point">
+        <span class="access-marker" style="background:#ec4899;">4</span>
+        <div class="access-info">
+          <div class="access-name">Ingresso Sud</div>
+          <div class="access-addr">Via Vittoria Colonna</div>
+          <div class="access-desc">Accesso pedonale · Vicino allo stadio</div>
+        </div>
+      </div>
+
+      <div class="access-point">
+        <span class="access-marker" style="background:#f59e0b;">5</span>
+        <div class="access-info">
+          <div class="access-name">Ingresso Centro espositivo</div>
+          <div class="access-addr">Via Balilla</div>
+          <div class="access-desc">Accesso al museo e biglietteria</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section section-alt">
+  <div class="section-title">Notizie e progetti</div>
+  <div class="section-sub">Le ultime iniziative dell'Ecomuseo della Pineta di D'Annunzio</div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="news-header">
+        <svg viewBox="0 0 48 48" fill="none"><path d="M24 4L16 18h5L6 32h36L27 18h5L24 4z" fill="#639922"/></svg>
+      </div>
+      <div class="news-body">
+        <div class="news-date">Marzo 2026</div>
+        <div class="news-title">Messa a dimora di 200 nuovi pini marittimi</div>
+        <div class="news-excerpt">In collaborazione con il Comune, un progetto di rimboschimento partecipato per ampliare e rigenerare la pineta.</div>
+        <a href="#" class="news-link">Continua a leggere →</a>
+      </div>
+    </div>
+    <div class="news-card">
+      <div class="news-header" style="background:#fef3c7;">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="12" y="8" width="24" height="32" rx="2" fill="#d97706"/><rect x="16" y="14" width="16" height="2" fill="#fef3c7"/><rect x="16" y="20" width="16" height="2" fill="#fef3c7"/><rect x="16" y="26" width="10" height="2" fill="#fef3c7"/></svg>
+      </div>
+      <div class="news-body">
+        <div class="news-date">Febbraio 2026</div>
+        <div class="news-title">Laboratorio: "La pioggia nel pineto" a scuola</div>
+        <div class="news-excerpt">Nuovi laboratori educativi per le classi elementari tra poesia di D'Annunzio, botanica e paesaggio costiero.</div>
+        <a href="#" class="news-link">Continua a leggere →</a>
+      </div>
+    </div>
+    <div class="news-card">
+      <div class="news-header" style="background:#e0f2fe;">
+        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="20" r="12" fill="#7dd3fc"/><path d="M16 36 Q24 28 32 36" stroke="#0369a1" stroke-width="2" fill="none"/><circle cx="24" cy="20" r="4" fill="#0369a1"/></svg>
+      </div>
+      <div class="news-body">
+        <div class="news-date">Gennaio 2026</div>
+        <div class="news-title">Call for artist: "La pineta racconta"</div>
+        <div class="news-excerpt">Aperta la selezione per artisti che vogliono interpretare la pineta attraverso opere d'arte site-specific.</div>
+        <a href="#" class="news-link">Continua a leggere →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<footer>
+  <div class="footer-brand">
+    <div class="footer-logo">
+      <div class="footer-logo-icon">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L7 9h3L6 16h4l-2 6h8l-2-6h4L14 9h3L12 2z" fill="#a8d5a2"/></svg>
+      </div>
+      <span>Pineta di D'Annunzio</span>
+    </div>
+    <p>Ecomuseo del Litorale Adriatico<br>info@pinetadannunzio.it<br>340 000 0000</p>
+  </div>
+  <div class="footer-col">
+    <h4>Scopri</h4>
+    <a href="#">Il progetto</a>
+    <a href="#">La pineta</a>
+    <a href="#">D'Annunzio e il bosco</a>
+    <a href="#">Fauna e flora</a>
+  </div>
+  <div class="footer-col">
+    <h4>Partecipa</h4>
+    <a href="#">Servizi educativi</a>
+    <a href="#">Laboratori</a>
+    <a href="#">Volontariato</a>
+    <a href="#">Contatti</a>
+  </div>
+  <div class="footer-col">
+    <h4>Lingua</h4>
+    <a href="#">Italiano</a>
+    <a href="#">English</a>
+    <a href="#">Deutsch</a>
+  </div>
+</footer>
+<div class="footer-bottom">
+  © 2026 Ecomuseo Pineta di D'Annunzio · in collaborazione con il Comune e la Regione
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+  // Centro Pineta Dannunziana, Pescara
+  const map = L.map('map', { scrollWheelZoom: false }).setView([42.4376, 14.2208], 15);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  const points = [
+    { lat: 42.4400, lng: 14.2185, color: '#dc2626', num: '1', name: 'Ingresso Nord',           addr: 'Viale della Pineta' },
+    { lat: 42.4380, lng: 14.2200, color: '#22c55e', num: '2', name: 'Ingresso Centrale',       addr: 'Viale Marconi' },
+    { lat: 42.4385, lng: 14.2255, color: '#3b82f6', num: '3', name: 'Ingresso Lungomare',      addr: 'Lungomare C. Colombo' },
+    { lat: 42.4350, lng: 14.2210, color: '#ec4899', num: '4', name: 'Ingresso Sud',            addr: 'Via Vittoria Colonna' },
+    { lat: 42.4365, lng: 14.2175, color: '#f59e0b', num: '5', name: 'Centro espositivo',       addr: 'Via Balilla' },
+  ];
+
+  points.forEach(p => {
+    const icon = L.divIcon({
+      className: 'pineta-marker',
+      html: `<div class="pin" style="background:${p.color}"><span>${p.num}</span></div>`,
+      iconSize: [30, 40],
+      iconAnchor: [15, 40],
+      popupAnchor: [0, -36]
+    });
+    L.marker([p.lat, p.lng], { icon })
+      .addTo(map)
+      .bindPopup(`<strong>${p.name}</strong><br><span style="color:#5f5f5f;font-size:12px">${p.addr}</span>`);
+  });
+</script>
+
+</body>
+</html>
