@@ -2,7 +2,8 @@
    Pineta di D'Annunzio — Ecomuseo del Litorale
    ========================================================= */
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box;  }
+html { scroll-behavior: smooth; }
 
 :root {
   --green-dark: #1a3a1a;
