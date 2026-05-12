@@ -19,11 +19,14 @@
       <div class="nav-logo-text">Pineta di D'Annunzio</div>
       <div class="nav-logo-sub">Ecomuseo del Litorale</div>
     </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
   </div>
   <div class="nav-links">
     <a href="progetto-ecomuseo.html">Progetto Ecomuseo</a>
     <a href="annunci-e-eventi.html">Annunci ed Eventi</a>
-    <a href="#">Percorsi e attività</a>
+    <a href="percorsi-attività.html">Percorsi ed Attività</a>
     <a href="#contatti" class="nav-cta">Contatti</a>
   </div>
 </nav>
@@ -322,6 +325,20 @@
       .addTo(map)
       .bindPopup(`<strong>${p.name}</strong><br><span style="color:#5f5f5f;font-size:12px">${p.addr}</span>`);
   });
+</script>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    const open = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !open);
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navToggle.setAttribute('aria-expanded', 'false');
+    navLinks.classList.remove('open');
+  }));
 </script>
 
 </body>
