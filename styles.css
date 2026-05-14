@@ -312,6 +312,7 @@ footer {
 .footer-logo span { font-size: 14px; font-weight: 500; }
 .footer-brand p { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
 .footer-col h4 { font-size: 11px; font-weight: 500; margin-bottom: 14px; letter-spacing: 0.6px; color: var(--text); }
+.footer-col p { font-size: 13px; font-weight: 500; margin-bottom: 14px; letter-spacing: 0.6px; color: var(--text); }
 .footer-col a { display: block; font-size: 13px; color: var(--text-muted); margin-bottom: 10px; transition: color 0.2s; }
 .footer-col a:hover { color: var(--text); }
 .footer-bottom {
