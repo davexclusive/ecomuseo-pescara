@@ -222,6 +222,109 @@ nav {
 .leaflet-popup-content-wrapper { border-radius: var(--radius-sm); }
 .leaflet-popup-content { font-family: 'Inter', sans-serif; font-size: 13px; margin: 10px 14px; }
 
+/* ---------- GALLERY SLIDER ---------- */
+.gallery-section {
+  padding: 64px 40px; background: var(--green-dark);
+}
+.gallery-header {
+  text-align: center; margin-bottom: 36px;
+}
+.gallery-header .section-title { color: #fff; }
+.gallery-header .section-sub { color: rgba(255,255,255,0.5); margin: 0 auto; }
+.slider { max-width: 900px; margin: 0 auto; }
+.slider-main {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+}
+.slider-img-wrap {
+  flex: 1; position: relative; border-radius: var(--radius);
+  overflow: hidden; background: #111;
+}
+.slider-img {
+  width: 100%; height: 480px; object-fit: cover; display: block;
+  transition: opacity 0.3s ease;
+}
+.slider-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 32px 20px 16px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.65));
+  color: #fff; font-size: 15px; font-weight: 500;
+}
+.slider-counter {
+  position: absolute; top: 14px; right: 16px;
+  background: rgba(0,0,0,0.45); color: #fff;
+  font-size: 12px; padding: 4px 10px; border-radius: 12px;
+}
+.slider-arrow {
+  flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08);
+  color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+.slider-arrow:hover {
+  background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.5);
+}
+.slider-arrow svg { width: 20px; height: 20px; }
+.slider-thumbs {
+  display: flex; gap: 8px; overflow-x: auto;
+  padding: 4px 0; scroll-behavior: smooth;
+  justify-content: center;
+  -ms-overflow-style: none; scrollbar-width: none;
+}
+.slider-thumbs::-webkit-scrollbar { display: none; }
+.slider-thumb {
+  flex-shrink: 0; width: 120px; height: 76px; border-radius: var(--radius-sm);
+  overflow: hidden; cursor: pointer; border: 2px solid transparent;
+  padding: 0; background: none; opacity: 0.5;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+.slider-thumb:hover { opacity: 0.8; }
+.slider-thumb.active {
+  opacity: 1; border-color: var(--green-light);
+}
+.slider-thumb img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+@media (max-width: 680px) {
+  .gallery-section { padding: 48px 20px; }
+  .slider-img { height: 280px; }
+  .slider-arrow { width: 36px; height: 36px; }
+  .slider-arrow svg { width: 16px; height: 16px; }
+  .slider-thumb { width: 90px; height: 58px; }
+}
+
+/* ---------- PINETA INTRO ---------- */
+.pineta-intro {
+  max-width: 860px; margin: 0 auto;
+}
+.pineta-intro-header { margin-bottom: 28px; }
+.pineta-highlights {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;
+}
+.pineta-tag {
+  display: inline-block; font-size: 12px; font-weight: 500;
+  padding: 6px 14px; border-radius: 20px;
+  background: var(--green-pale); color: var(--green-text);
+  border: 1px solid rgba(45, 106, 45, 0.15);
+}
+.pineta-intro-text {
+  font-size: 15px; line-height: 1.85; color: var(--text-muted);
+  columns: 2; column-gap: 36px;
+}
+.pineta-intro-text p { margin-bottom: 14px; break-inside: avoid; }
+
+/* ---------- MAPPA DI COMUNITÀ ---------- */
+.mappa-comunita { max-width: 720px; margin: 0 auto; text-align: center; }
+.mappa-comunita .section-title { margin-bottom: 12px; }
+.mappa-comunita .section-sub { max-width: 100%; margin: 0 auto 16px; }
+.mappa-text {
+  font-size: 15px; line-height: 1.8; color: var(--text-muted);
+}
+
+@media (max-width: 680px) {
+  .pineta-intro-text { columns: 1; }
+}
+
 /* ---------- POETRY ---------- */
 .poetry-section { background: var(--sand); padding: 72px 40px; text-align: center; }
 .poetry-inner { max-width: 520px; margin: 0 auto; }
@@ -243,6 +346,26 @@ nav {
   background: var(--green-pale);
 }
 .news-header svg { width: 52px; height: 52px; }
+.card-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.card-icon svg { width: 28px; height: 28px; }
+.card-list {
+  list-style: none; padding: 0; margin: 0;
+  font-size: 13px; color: var(--text-muted); line-height: 1.7;
+}
+.card-list li {
+  padding: 6px 0 6px 16px; position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.card-list li:last-child { border-bottom: none; }
+.card-list li::before {
+  content: ''; position: absolute; left: 0; top: 13px;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--green-mid); opacity: 0.5;
+}
+.card-list li strong { color: var(--text); font-weight: 500; }
 .news-body { padding: 18px; }
 .news-date { font-size: 11px; color: var(--text-muted); margin-bottom: 8px; }
 .news-title { font-size: 15px; font-weight: 500; margin-bottom: 8px; line-height: 1.45; }
@@ -295,6 +418,50 @@ nav {
 }
 .event-meta-item { font-size: 13px; color: var(--green-text); }
 .event-meta-item strong { display: block; font-size: 11px; letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 4px; opacity: 0.8; }
+
+/* ---------- SWOT ---------- */
+.swot-header { text-align: center; margin-bottom: 36px; }
+.swot-header .section-sub { margin: 0 auto; }
+.swot-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  max-width: 900px; margin: 0 auto;
+}
+.swot-card {
+  border-radius: var(--radius); padding: 28px;
+  border: 1px solid var(--border);
+}
+.swot-card-label {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 500;
+  margin-bottom: 16px;
+}
+.swot-card ul {
+  list-style: none; padding: 0; margin: 0;
+  font-size: 14px; line-height: 1.7; color: var(--text-muted);
+}
+.swot-card li {
+  padding: 5px 0 5px 18px; position: relative;
+}
+.swot-card li::before {
+  content: ''; position: absolute; left: 0; top: 13px;
+  width: 6px; height: 6px; border-radius: 50%;
+}
+.swot-strengths { background: #f0faf0; }
+.swot-strengths .swot-card-label { color: #166534; }
+.swot-strengths li::before { background: #22c55e; }
+.swot-weaknesses { background: #fef7ed; }
+.swot-weaknesses .swot-card-label { color: #92400e; }
+.swot-weaknesses li::before { background: #f59e0b; }
+.swot-opportunities { background: #eff6ff; }
+.swot-opportunities .swot-card-label { color: #1e40af; }
+.swot-opportunities li::before { background: #3b82f6; }
+.swot-threats { background: #fef2f2; }
+.swot-threats .swot-card-label { color: #991b1b; }
+.swot-threats li::before { background: #ef4444; }
+
+@media (max-width: 680px) {
+  .swot-grid { grid-template-columns: 1fr; }
+}
 
 /* ---------- FOOTER ---------- */
 footer {
